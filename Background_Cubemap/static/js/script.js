@@ -69,7 +69,6 @@ function main() {
         }
         return needResize;
     }
-
     function render(time) {
         time *= 0.001;
         if (resizeRendererToDisplaySize(renderer)) {
@@ -88,5 +87,4 @@ function main() {
     }
     requestAnimationFrame(render);
 }
-
 main();
