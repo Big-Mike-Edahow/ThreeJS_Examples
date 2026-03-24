@@ -18,19 +18,13 @@ function main() {
         new THREE.Plane(new THREE.Vector3(0, 0, - 1), 0)
     ];
 
-    // Scene.
     const scene = new THREE.Scene();
-
-    // Camera.
     const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 200);
     camera.position.set(- 1.5, 2.5, 3.0);
-
-    // Lighting.
     const light = new THREE.HemisphereLight(0xffffff, 0x080808, 4.5);
     light.position.set(- 1.25, 1, 1.25);
     scene.add(light);
 
-    // Renderer.
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
