@@ -4,7 +4,6 @@ import * as THREE from 'three';
 import Stats from 'three/addons/libs/stats.module.js';
 import { FlyControls } from 'three/addons/controls/FlyControls.js';
 import { Lensflare, LensflareElement } from 'three/addons/objects/Lensflare.js';
-import { onWindowResize } from './utils.js';
 
 function main() {
     // Timer.
@@ -94,6 +93,11 @@ function main() {
     container.appendChild(stats.dom);
 
     window.addEventListener('resize', onWindowResize);
+    function onWindowResize(renderer, camera) {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+    }
 
     function animate() {
         timer.update();
