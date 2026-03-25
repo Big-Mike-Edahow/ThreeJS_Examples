@@ -7,6 +7,7 @@ import { Lensflare, LensflareElement } from 'three/addons/objects/Lensflare.js';
 import { onWindowResize } from './utils.js';
 
 function main() {
+    // Timer.
     const timer = new THREE.Timer();
     timer.connect(document);
 
