@@ -93,7 +93,7 @@ function main() {
     container.appendChild(stats.dom);
 
     window.addEventListener('resize', onWindowResize);
-    function onWindowResize(renderer, camera) {
+    function onWindowResize() {
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
