@@ -92,6 +92,7 @@ function main() {
     const stats = new Stats();
     container.appendChild(stats.dom);
 
+    // Responsiveness.
     window.addEventListener('resize', onWindowResize);
     function onWindowResize() {
         renderer.setSize(window.innerWidth, window.innerHeight);
@@ -99,12 +100,14 @@ function main() {
         camera.updateProjectionMatrix();
     }
 
+    // Animation.
     function animate() {
         timer.update();
         render();
         stats.update();
     }
 
+    // Render the scene.
     function render() {
         const delta = timer.getDelta();
         controls.update(delta);
@@ -113,3 +116,4 @@ function main() {
 }
 
 main();
+
