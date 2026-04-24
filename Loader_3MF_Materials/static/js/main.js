@@ -39,7 +39,8 @@ function main() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFShadowMap;
-    document.body.appendChild(renderer.domElement);
+    const container = document.querySelector("#threejs-container");
+    container.appendChild(renderer.domElement);
 
     // Orbit Controls.
     const controls = new OrbitControls(camera, renderer.domElement);
