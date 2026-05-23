@@ -1,0 +1,33 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="importmap">
+        {"imports": {
+		"three": "https://threejs.org/build/three.module.js",
+		"three/addons/": "https://threejs.org/examples/jsm/"}}
+    </script>
+    <link href="./static/css/style.css" type="text/css" rel="stylesheet">
+    <link href="./favicon.ico" type="image/png" rel="icon">
+    <title>ThreeJS - Car Materials</title>
+</head>
+
+<body>
+    <main>
+        <div id="info">
+            <h1>Ferrari 458 Italia 🏎️</h1>
+            <span class="colorPicker"><input id="body-color" type="color" value="#ff0000"></input><br>Body</span>
+            <span class="colorPicker"><input id="details-color" type="color" value="#ffffff"></input><br>Details</span>
+            <span class="colorPicker"><input id="glass-color" type="color" value="#ffffff"></input><br>Glass</span>
+        </div>
+        <section id="threejs-container"></section>
+    </main>
+    <script src="./static/js/main.js" type="module"></script>
+</body>
+
+</html>
+
